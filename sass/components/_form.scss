@@ -1,0 +1,122 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.form-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $dark-color;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.form-field {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus {
+  /*outline-color: $active;*/
+  border: 1px solid $active;
+  outline: none;
+}
+
+.form-field:focus ~ .form-icon {
+  fill: $active;
+}
+.form-field:not(textarea) {
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+}
+
+.form-field::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+  margin-bottom: 20px;
+}
+
+.form-field:not(input) {
+  padding-top: 12px;
+  padding-left: 16px;
+}
+
+.form-icon {
+  top: 55%;
+  left: 12px;
+  transform: translateY(-50%);
+  position: absolute;
+  fill: $dark-color;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $dark-color;
+  margin-right: 8.4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background-color: $active;
+  background-image: url(../svg/icon.check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-radius: 2px;
+  border-color: $active;
+}
+.checkbox-label a {
+  color: $active;
+}
+
+.form > .btn {
+  padding: 10px 55px 10px 56px;
+  margin-left: auto;
+  margin-right: auto;
+}
