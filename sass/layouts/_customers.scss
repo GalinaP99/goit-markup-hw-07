@@ -7,6 +7,14 @@
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+&:focus {
+  border: 1px solid $active;
+}
+  &:hover .logo-icon,
+&:focus .logo-icon {
+  fill: $active;
+}
 }
 
 .logo-icon {
@@ -14,12 +22,6 @@
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-logo:hover .logo-icon,
-.link-logo:focus .logo-icon {
-  fill: $active;
-}
 
-.link-logo:hover,
-.link-logo:focus {
-  border: 1px solid $active;
-}
+
+

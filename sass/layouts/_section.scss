@@ -3,9 +3,8 @@
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
 
-.section-title {
+&-title {
   color: $dark-color;
   font-weight: 700;
   font-size: 36px;
@@ -16,7 +15,7 @@
   margin-top: 0px;
 }
 
-.section-item {
+&-item {
   color: $dark-color;
   font-weight: 700;
   font-size: 14px;
@@ -27,3 +26,4 @@
   margin-top: 0px;
 }
 
+}

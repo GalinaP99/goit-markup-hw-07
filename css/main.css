@@ -49,9 +49,12 @@ ul {
   color: #757575;
 }
 
-.link:hover,
-.link:focus,
-.link.current {
+.link.contacts:hover .logo-info,
+.link.contacts:focus .logo-info {
+  fill: #2196f3;
+}
+
+.link:hover, .link:focus, .link.current {
   color: #2196f3;
 }
 
@@ -71,11 +74,6 @@ ul {
   fill: #757575;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.link.contacts:hover .logo-info,
-.link.contacts:focus .logo-info {
-  fill: #2196f3;
 }
 
 .container {
@@ -143,6 +141,17 @@ img {
   padding: 10px 32px;
 }
 
+.btn.send {
+  padding-top: 10px;
+  padding-right: 62px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  margin-left: 12px;
+  background-image: url(../svg/icon.send.svg);
+  background-repeat: no-repeat;
+  background-position: right 28px bottom 13px;
+}
+
 .nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -178,24 +187,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-icon:hover,
-.link-icon.social:hover,
-.link-icon:focus,
-.link-icon.social:focus {
+.link-icon:hover, .link-icon.social:hover, .link-icon:focus, .link-icon.social:focus {
   background-color: #2196f3;
-}
-
-.social-icon {
-  width: 20px;
-  height: 20px;
-  fill: #afb1b8;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-container {
-  margin-bottom: 30px;
-  margin-left: 32px;
 }
 
 .link-icon:hover svg,
@@ -215,6 +208,19 @@ img {
 
 .icon:not(:last-child) {
   margin-right: 10px;
+}
+
+.icon-social {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container {
+  margin-bottom: 30px;
+  margin-left: 32px;
 }
 
 .insta {
@@ -282,7 +288,6 @@ img {
 }
 
 .form-field:focus {
-  /*outline-color: $active;*/
   border: 1px solid #2196f3;
   outline: none;
 }
@@ -355,15 +360,8 @@ img {
   fill: #212121;
 }
 
-.checkbox-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+.form > .btn {
+  padding: 10px 55px 10px 56px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -377,6 +375,23 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox-label a {
+  color: #2196f3;
 }
 
 .checkbox-icon {
@@ -396,16 +411,6 @@ img {
   background-origin: border-box;
   border-radius: 2px;
   border-color: #2196f3;
-}
-
-.checkbox-label a {
-  color: #2196f3;
-}
-
-.form > .btn {
-  padding: 10px 55px 10px 56px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .sign-up {
@@ -428,17 +433,6 @@ img {
   padding-left: 16px;
 }
 
-.btn.send {
-  padding-top: 10px;
-  padding-right: 62px;
-  padding-bottom: 10px;
-  padding-left: 29px;
-  margin-left: 12px;
-  background-image: url(../svg/icon.send.svg);
-  background-repeat: no-repeat;
-  background-position: right 28px bottom 13px;
-}
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -449,9 +443,12 @@ img {
   overflow: auto;
 }
 
-.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.5);
-          transform: translate(-50%, -50%) scale(0.5);
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: 300ms linear 0.7s;
+  transition: 300ms linear 0.7s;
 }
 
 .modal {
@@ -470,6 +467,11 @@ img {
   min-height: 581px;
   -webkit-transition: 0.5s linear 0.3s;
   transition: 0.5s linear 0.3s;
+}
+
+.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
 }
 
 .btn-close {
@@ -495,18 +497,9 @@ img {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-close:focus,
-.btn-close:hover {
+.btn-close:focus, .btn-close:hover {
   fill: #2196f3;
   outline-color: #2196f3;
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  -webkit-transition: 300ms linear 0.7s;
-  transition: 300ms linear 0.7s;
 }
 
 .section {
@@ -649,20 +642,20 @@ img {
   letter-spacing: 0.03em;
 }
 
-.foto-team {
-  background-color: #fff;
-  width: calc((100% - 3 * 30px) / 4);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
 .our-team-title {
   font-weight: 500;
   font-size: 16px;
   color: #212121;
   margin-top: 30px;
   margin-bottom: 10px;
+}
+
+.foto-team {
+  background-color: #fff;
+  width: calc((100% - 3 * 30px) / 4);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .position {
@@ -688,10 +681,8 @@ img {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-icon {
-  fill: #afb1b8;
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.link-logo:hover, .link-logo:focus {
+  border: 1px solid #2196f3;
 }
 
 .link-logo:hover .logo-icon,
@@ -699,9 +690,10 @@ img {
   fill: #2196f3;
 }
 
-.link-logo:hover,
-.link-logo:focus {
-  border: 1px solid #2196f3;
+.logo-icon {
+  fill: #afb1b8;
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-section {
@@ -773,9 +765,7 @@ img {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button:hover,
-.button:focus,
-.button.current-btn {
+.button:hover, .button:focus, .button.current-btn {
   background-color: #2196f3;
   color: #fff;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -806,8 +796,7 @@ img {
   margin-bottom: 0;
 }
 
-.card-item:hover,
-.card-item:focus {
+.card-item:hover, .card-item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -815,6 +804,11 @@ img {
 .card-box {
   position: relative;
   overflow: hidden;
+}
+
+.card-box:hover .card-overlay {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .card-overlay {
@@ -831,11 +825,6 @@ img {
   transition: -webkit-transform 250ms ease;
   transition: transform 250ms ease;
   transition: transform 250ms ease, -webkit-transform 250ms ease;
-}
-
-.card-box:hover .card-overlay {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 
 .card-overlay > p {

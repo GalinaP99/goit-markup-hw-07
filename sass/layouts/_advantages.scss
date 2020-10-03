@@ -4,9 +4,9 @@
 
 .list-adv {
   width: calc((100% - 3 * 30px) / 4);
-}
 
-.list-adv::before {
+
+&::before {
   content: '';
   display: block;
   height: 120px;
@@ -18,20 +18,21 @@
   margin-bottom: 30px;
 }
 
-.list-adv:nth-child(1)::before {
+&:nth-child(1)::before {
   background-image: url(../svg/1antenna.svg);
 }
 
-.list-adv:nth-child(2)::before {
+&:nth-child(2)::before {
   background-image: url(../svg/2clock.svg);
 }
 
-.list-adv:nth-child(3)::before {
+&:nth-child(3)::before {
   background-image: url(../svg/3diagram.svg);
 }
 
-.list-adv:nth-child(4)::before {
+&:nth-child(4)::before {
   background-image: url(../svg/4astronaut.svg);
+}
 }
 
 .description {

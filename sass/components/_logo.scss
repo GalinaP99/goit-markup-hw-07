@@ -6,12 +6,13 @@
   text-decoration: none;
   color: $active;
   letter-spacing: 0.03em;
-}
-.logo-title {
+
+&-title {
   color: $black;
   margin-right: 93px;
 }
 
-.logo-title-2 {
+&-title-2 {
   color: $white;
+}
 }
